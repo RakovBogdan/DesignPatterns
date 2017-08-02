@@ -1,6 +1,9 @@
-package org.bohdanrakov.designpatterns.creational.builder;
+package org.bohdanrakov.designpatterns.creational.builder.simple;
 
-public class BuilderApp {
+import org.bohdanrakov.designpatterns.creational.builder.Car;
+import org.bohdanrakov.designpatterns.creational.builder.Transmission;
+
+public class SimpleBuilderApp {
 
     public static void main(String[] args) {
         Car car = new CarBuilder()
@@ -12,38 +15,6 @@ public class BuilderApp {
     }
 }
 
-enum Transmission {
-    MANUAL, AUTO
-}
-
-
-class Car {
-
-    String make;
-    Transmission transmission;
-    int maxSpeed;
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public void setTransmission(Transmission transmission) {
-        this.transmission = transmission;
-    }
-
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "make='" + make + '\'' +
-                ", transmission=" + transmission +
-                ", maxSpeed=" + maxSpeed +
-                '}';
-    }
-}
 
 class CarBuilder {
 
