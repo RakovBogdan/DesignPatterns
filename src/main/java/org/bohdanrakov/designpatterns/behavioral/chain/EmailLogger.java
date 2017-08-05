@@ -1,26 +1,14 @@
 package org.bohdanrakov.designpatterns.behavioral.chain;
 
-public class EmailLogger implements Logger{
+    class EmailLogger extends Logger{
 
-    int priority;
-    Logger next;
-
-    public EmailLogger(int priority) {
-        this.priority = priority;
+    EmailLogger(int priority) {
+        super(priority);
     }
 
     @Override
-    public void writeMessage(String message, int level) {
-        if(level <= priority) {
-            System.out.println("Writing email: " + message);
-        }
-
-        if (next != null) {
-            next.writeMessage(message, level);
-        }
+    void write(String message) {
+        System.out.println("Sending Email: " + message);
     }
 
-    public void setNext(Logger next) {
-        this.next = next;
-    }
 }
