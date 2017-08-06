@@ -5,15 +5,18 @@ public class Main {
     public static void main(String[] args) {
         TextChat chat = new TextChat();
 
-        User admin = new Admin(chat);
-        User user1 = new SimpleUser(chat);
-        User user2 = new SimpleUser(chat);
+        User admin = new Admin(chat, "Bohdan");
+        User user1 = new SimpleUser(chat, "John");
+        User user2 = new SimpleUser(chat, "Volodymyr");
+        User user3 = new SimpleUser(chat, "Petro");
 
-        chat.addUser(admin);
+        chat.setAdmin(admin);
         chat.addUser(user1);
         chat.addUser(user2);
+        chat.addUser(user3);
 
-        user1.sendMessage("Hello, I'am user 1");
-        admin.sendMessage("ADMIN has joined the chat!!!");
+        user2.setEnable(false);
+
+        admin.sendMessage("Hello!");
     }
 }

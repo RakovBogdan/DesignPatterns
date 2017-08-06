@@ -1,20 +1,13 @@
 package org.bohdanrakov.designpatterns.behavioral.mediator;
 
-class Admin implements User {
+class Admin extends User {
 
-    private Chat chat;
-
-    Admin(Chat chat) {
-        this.chat = chat;
-    }
-
-    @Override
-    public void sendMessage(String message) {
-        chat.sendMessage(this, message);
+    Admin(Chat chat, String name) {
+        super(chat, name);
     }
 
     @Override
     public void getMessage(String message) {
-        System.out.println("Admin got message: \"" + message + "\"");
+        System.out.println("Admin " + getName() + " got message: \"" + message + "\"");
     }
 }
