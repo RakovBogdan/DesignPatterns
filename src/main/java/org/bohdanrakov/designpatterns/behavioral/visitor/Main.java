@@ -3,12 +3,11 @@ package org.bohdanrakov.designpatterns.behavioral.visitor;
 public class Main {
 
     public static void main(String[] args) {
-
-        Element body = new BodyElement();
-        Element engine = new EngineElement();
+        Element car = new CarElement();
+        Visitor hooligan = new HooliganVisitor();
         Visitor mechanic = new MechanicVisitor();
-
-        body.accept(mechanic);
-        engine.accept(mechanic);
+        car.accept(hooligan);
+        System.out.println();
+        car.accept(mechanic);
     }
 }

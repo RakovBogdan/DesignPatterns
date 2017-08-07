@@ -11,4 +11,14 @@ public class MechanicVisitor implements Visitor {
     public void visit(BodyElement body) {
         System.out.println("Repair body");
     }
+
+    @Override
+    public void visit(CarElement car) {
+        System.out.println("Checked car");
+    }
+
+    @Override
+    public void visit(WheelElement wheel) {
+        System.out.println("Repaired " + wheel.getName() + " wheel");
+    }
 }
