@@ -1,4 +1,4 @@
-package org.bohdanrakov.designpatterns.strucural.Decorator;
+package org.bohdanrakov.designpatterns.strucural.decorator;
 
 class Main {
 
