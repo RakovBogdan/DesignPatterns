@@ -1,4 +1,4 @@
-package org.bohdanrakov.designpatterns.strucural.delagate;
+package org.bohdanrakov.designpatterns.strucural.delagate.simple;
 
 public class Main {
 
